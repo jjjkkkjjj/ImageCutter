@@ -53,16 +53,16 @@ class Main(QMainWindow):
         self.statusBar()
 
         # メニューバーのアイコン設定
-        openFile = QAction('Open image', self)
+        openFile = QAction('Open images dir', self)
         # ショートカット設定
         openFile.setShortcut('Ctrl+O')
         # ステータスバー設定
-        openFile.setStatusTip('Open new image')
+        openFile.setStatusTip('Open directory storing images')
         openFile.triggered.connect(self.openFileDialog)
 
-        saveFile = QAction('Save video', self)
+        saveFile = QAction('Save images', self)
         saveFile.setShortcut('Ctrl+S')
-        saveFile.setStatusTip('Save video')
+        saveFile.setStatusTip('Specify directory to save trimmed images')
         saveFile.triggered.connect(self.saveFileDialog)
 
         fileMenu = self.menuBar().addMenu('&File')
